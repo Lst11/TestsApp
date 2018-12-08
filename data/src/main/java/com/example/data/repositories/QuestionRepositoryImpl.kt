@@ -3,13 +3,14 @@ package com.example.data.repositories
 import android.content.Context
 import com.example.domain.entity.Question
 import com.example.domain.repositories.QuestionRepository
+import io.reactivex.Observable
 import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
 
 class QuestionRepositoryImpl(val context: Context) : QuestionRepository {
 
-    override fun generateData(): MutableList<Question> {
+    override fun generateData(): Observable<List<Question>> {
 
         val list: MutableList<Question> = mutableListOf()
         try {
@@ -28,7 +29,7 @@ class QuestionRepositoryImpl(val context: Context) : QuestionRepository {
         } catch (e: JSONException) {
             e.printStackTrace()
         }
-        return list
+        return Observable.just(list)
     }
 
     private fun loadJSONFromAsset(): String {
