@@ -1,7 +1,7 @@
 package com.example.data.utils
 
 import com.example.data.entity.WordResponse
-import com.example.domain.entity.Word
+import com.example.domain.entity.Question
 
 object Transformer {
     //    fun transformIdToRequest(id: String?): String {
@@ -12,7 +12,7 @@ object Transformer {
 //        return "name LIKE'${name}%'"
 //    }
 //
-    fun transformResponseToDomain(wordPL: String, wordResponse: WordResponse): Word {
-        return Word(wordPL, wordResponse.listOfWords.toMutableList())
+    fun transformResponseToDomain(wordPL: String, wordResponse: WordResponse): Question {
+        return Question(wordPL, wordResponse.listOfWords.toMutableList())
     }
 }

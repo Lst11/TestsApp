@@ -1,11 +1,10 @@
 package com.gmail.superarch.inject
 
 import android.content.Context
-import com.example.data.repositories.WordsRepositoryImpl
+import com.example.data.repositories.QuestionRepositoryImpl
 import com.example.domain.executor.PostExecutorThread
-import com.example.domain.repositories.WordsRepository
+import com.example.domain.repositories.QuestionRepository
 import com.example.lena.finalapp.executor.UIThread
-import com.gmail.name.data.net.RestService
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named
@@ -25,7 +24,7 @@ class DomainModule(private val context: Context) {
 
     @Provides
     fun provideWordsRepository(restService: RestService)
-            : WordsRepository = WordsRepositoryImpl(restService)
+            : QuestionRepository = QuestionRepositoryImpl(restService)
 
     @Provides
     @Singleton
