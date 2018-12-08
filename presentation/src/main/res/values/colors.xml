@@ -12,6 +12,11 @@
     <color name="grayTransparent50">#32595959</color>
     <color name="grayTransparent100">#64595959</color>
 
+    <color name="christmasRed">#ea4335</color>
+    <color name="christmasBlue">#4285f4</color>
+    <color name="christmasYellow">#f9b70d</color>
+    <color name="christmasGreen">#3aa757</color>
+
 
 
 </resources>
