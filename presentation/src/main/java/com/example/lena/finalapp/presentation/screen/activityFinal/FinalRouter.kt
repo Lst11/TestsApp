@@ -1,11 +1,10 @@
-package com.example.lena.finalapp.presentation.screen
+package com.example.lena.finalapp.presentation.screen.activityTest
 
-import com.example.lena.finalapp.presentation.base.BaseRouter
 import android.content.Intent
-import com.example.lena.finalapp.presentation.screen.activityTest.FinalActivity
+import com.example.lena.finalapp.presentation.base.BaseRouter
+import com.example.lena.finalapp.presentation.screen.MainActivity
 
-
-class MainRouter(activity: MainActivity) : BaseRouter<MainActivity>(activity) {
+class FinalRouter(activity: FinalActivity) : BaseRouter<FinalActivity>(activity) {
 
 //    fun goToMenuItem(selectedFragment: Fragment) {
 //
@@ -14,8 +13,8 @@ class MainRouter(activity: MainActivity) : BaseRouter<MainActivity>(activity) {
 //        fragmentTransition.commit()
 //    }
 
-    fun goToTest(){
-        val intent = Intent(activity, FinalActivity::class.java)
+    fun goToMain(){
+        val intent = Intent(activity, MainActivity::class.java)
 //        myIntent.putExtra("key", value)
         activity.startActivity(intent)
     }

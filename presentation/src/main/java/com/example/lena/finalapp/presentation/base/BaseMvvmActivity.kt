@@ -3,7 +3,6 @@ package com.example.lena.finalapp.presentation.base
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.os.Bundle
-import android.view.Window
 import com.example.lena.finalapp.BR
 
 abstract class BaseMvvmActivity<VM : BaseViewModel<R>,
