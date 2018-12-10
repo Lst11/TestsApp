@@ -23,7 +23,7 @@ class FinalViewModel : BaseViewModel<FinalRouter>() {
 
 
     init {
-        val resultInt = Random().nextInt(3)
+        val resultInt = Random().nextInt(4)
         Log.e("aaa", resultInt.toString())
         result.set(list[resultInt])
 

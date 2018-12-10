@@ -105,6 +105,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@color/christmasGreen"
+            android:onClick="@{viewModel::onClickNext}"
             android:text="@={viewModel.answer4}"
             app:layout_constraintBottom_toTopOf="@+id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
