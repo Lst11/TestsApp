@@ -18,7 +18,10 @@
 
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
-
         </activity>
+
+        <activity android:name=".presentation.screen.activityTest.FinalActivity" />
+
+        <activity android:name=".presentation.screen.activityTest.TestActivity" />
     </application>
 </manifest>

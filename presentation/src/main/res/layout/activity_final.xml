@@ -25,22 +25,25 @@
                 style="@style/textViewChristmasAnswer"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="5"
+                android:layout_weight="3"
                 android:paddingRight="4dp"
-                android:textAlignment="textEnd"
-                tools:text="Сегодня ты бла бла" />
+                android:text="Сегодня ты"
+                android:textAlignment="textEnd" />
 
             <TextView
+                android:id="@+id/resultTextView"
                 style="@style/textViewChristmasAnswer"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="5"
                 android:paddingLeft="4dp"
-                android:textAlignment="textStart"
-                tools:text="Олень" />
+                android:singleLine="false"
+                android:text="@={viewModel.result}"
+                android:textAlignment="textStart" />
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="3" />
@@ -48,6 +51,7 @@
         <TextView
             style="@style/textViewChristmas"
             android:layout_width="match_parent"
+            android:onClick="@{viewModel::onClick}"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:text="@string/exit" />

@@ -1,6 +1,7 @@
 package com.example.data.repositories
 
 import android.content.Context
+import android.util.Log
 import com.example.domain.entity.Question
 import com.example.domain.repositories.QuestionRepository
 import io.reactivex.Observable
@@ -14,6 +15,7 @@ class QuestionRepositoryImpl(val context: Context) : QuestionRepository {
 
         val list: MutableList<Question> = mutableListOf()
         try {
+            Log.e("aaa", loadJSONFromAsset())
             val obj = JSONObject(loadJSONFromAsset())
             val m_jArry = obj.getJSONArray("сhristmas_test")
             for (i in 0 until m_jArry.length()) {
@@ -29,13 +31,14 @@ class QuestionRepositoryImpl(val context: Context) : QuestionRepository {
         } catch (e: JSONException) {
             e.printStackTrace()
         }
+        Log.e("aaa", list.toString())
         return Observable.just(list)
     }
 
     private fun loadJSONFromAsset(): String {
         var json = ""
         try {
-            val stream = context.assets.open("test_info.json")
+            val stream = context.assets.open("tests_info.json")
             val size = stream.available()
             val buffer = size.let { ByteArray(it) }
             stream.read(buffer)

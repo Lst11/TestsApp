@@ -14,7 +14,7 @@ class TestRouter(activity: TestActivity) : BaseRouter<TestActivity>(activity) {
 //    }
 
     fun goToFinish(){
-        val intent = Intent(activity, MainActivity::class.java)
+        val intent = Intent(activity, FinalActivity::class.java)
 //        myIntent.putExtra("key", value)
         activity.startActivity(intent)
     }

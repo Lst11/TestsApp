@@ -3,5 +3,5 @@
     
     <string name="nameOfApp">Christmas Test</string>
     <string name="startTest">Lets go</string>
-    <string name="exit">Exit</string>
+    <string name="exit">Выход</string>
 </resources>
