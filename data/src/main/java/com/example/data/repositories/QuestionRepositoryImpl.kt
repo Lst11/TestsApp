@@ -9,7 +9,7 @@ import org.json.JSONException
 import org.json.JSONObject
 import java.io.IOException
 
-class QuestionRepositoryImpl(val context: Context) : QuestionRepository {
+class QuestionRepositoryImpl(private val context: Context) : QuestionRepository {
 
     override fun generateData(): Observable<List<Question>> {
 

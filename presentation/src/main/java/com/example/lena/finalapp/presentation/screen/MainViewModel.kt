@@ -9,4 +9,9 @@ class MainViewModel : BaseViewModel<MainRouter>() {
         router?.goToTest()
     }
 
+    fun onClickPlay(v: View){
+        //TODO to add playing the sound
+
+    }
+
 }
